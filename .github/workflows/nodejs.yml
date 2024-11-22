@@ -2,9 +2,15 @@ name: CI Node.JS
 
 on:
   push:
+    branches:
+        - main
+        - dev
     paths:
       - 'nodejs/**'
   pull_request:
+    branches:
+        - main
+        - dev
     paths:
       - 'nodejs/**'
 
