@@ -36,4 +36,4 @@ jobs:
         run: npm test
       
       - name: Rodando Sonar
-        uses: .github/workflows/reusable-workflows.yml
+        uses: blgianini/treinamento-github/.github/workflows/reusable-workflows.yml
