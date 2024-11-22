@@ -34,3 +34,6 @@ jobs:
       - name: Run tests with Jest
         working-directory: ./nodejs
         run: npm test
+      
+      - name: Rodando Sonar
+        uses: .github/workflows/reusable-workflows.yml
