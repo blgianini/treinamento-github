@@ -1,0 +1,30 @@
+name: CI Node.JS
+
+on:
+  push:
+    paths:
+      - 'nodejs/**'
+  pull_request:
+    paths:
+      - 'nodejs/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23' 
+
+      - name: Install dependencies
+        working-directory: ./nodejs
+        run: npm install
+
+      - name: Run tests with Jest
+        working-directory: ./nodejs
+        run: npm test
